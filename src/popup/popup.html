@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Task Tamagotchi</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="openOptions" class="settings-button" aria-label="Settings">
+        ⚙️
+    </button>
+    <div class="container">
+        <h1>Task Pet</h1>
+        <div class="pet-container">
+            <div class="pet-image-container">
+                <img id="petImage" src="assets/sad_fish.png" alt="Your pet" width="120" height="120">
+            </div>
+            <div id="status" class="status">Loading...</div>
+        </div>
+        <button id="completeTask" class="task-button">
+            <span class="button-text">I completed my task!</span>
+        </button>
+        <button id="restart" class="task-button" style="display:none;">
+            <span class="button-text">Restart Pet</span>
+        </button>         
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

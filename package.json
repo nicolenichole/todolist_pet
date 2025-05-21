@@ -1,0 +1,13 @@
+{
+    "name": "daily-task-tamagotchi",
+    "version": "1.0.0",
+    "description": "A Chrome extension tamagotchi for tracking daily tasks like Leetcode.",
+    "main": "src/background/background.js",
+    "scripts": {
+      "build": "echo 'No build step configured yet.'"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {}
+  }
+  

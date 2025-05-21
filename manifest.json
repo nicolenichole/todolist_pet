@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Daily Task Tamagotchi",
+    "version": "1.0",
+    "description": "A tamagotchi that reminds you to complete daily tasks like Leetcode.",
+    "action": {
+        "default_popup": "src/popup/popup.html",
+        "default_icon": {
+            "16": "assets/icon16.png",
+            "48": "assets/icon48.png",
+            "128": "assets/icon128.png"
+        }
+    },
+    "background": {
+        "service_worker": "src/background/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.leetcode.com/*"],
+            "js": ["src/content/content.js"]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "notifications",
+        "alarms"
+    ],
+    "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["assets/icon16.png", 
+                "assets/icon48.png", 
+                "assets/icon128.png",
+                "assets/happy_fish",
+                "assets/sad_fish",
+                "assets/dead_fish"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+
+}
+  
